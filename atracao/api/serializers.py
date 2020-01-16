@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from atracoes.models import Atracao
+from atracao.models import Atracao
 
 
 class AtracoesSerializer(ModelSerializer):

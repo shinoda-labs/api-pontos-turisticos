@@ -9,10 +9,10 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('atracoes', '0001_initial'),
+        ('atracao', '0001_initial'),
         ('localizacao', '0001_initial'),
-        ('avaliacoes', '0001_initial'),
-        ('comentarios', '0001_initial'),
+        ('avaliacao', '0001_initial'),
+        ('comentario', '0001_initial'),
     ]
 
     operations = [
@@ -23,9 +23,9 @@ class Migration(migrations.Migration):
                 ('nome', models.CharField(max_length=150)),
                 ('descricao', models.TextField(default=None)),
                 ('status', models.BooleanField(default=False)),
-                ('atracoes', models.ManyToManyField(to='atracoes.Atracao')),
-                ('avaliacoes', models.ManyToManyField(to='avaliacoes.Avaliacao')),
-                ('comentarios', models.ManyToManyField(to='comentarios.Comentario')),
+                ('atracao', models.ManyToManyField(to='atracao.Atracao')),
+                ('avaliacao', models.ManyToManyField(to='avaliacao.Avaliacao')),
+                ('comentario', models.ManyToManyField(to='comentario.Comentario')),
                 ('endereco', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='localizacao.Localizacao')),
             ],
         ),

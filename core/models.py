@@ -1,7 +1,7 @@
 from django.db import models
-from atracoes.models import Atracao
-from comentarios.models import Comentario
-from avaliacoes.models import Avaliacao
+from atracao.models import Atracao
+from comentario.models import Comentario
+from avaliacao.models import Avaliacao
 from localizacao.models import Localizacao
 
 
