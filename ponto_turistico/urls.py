@@ -5,12 +5,14 @@ from core.api.viewsets import PontoTuristicoViewSet
 from atracao.api.viewsets import AtracaoViewSet
 from localizacao.api.viewsets import LocalizacaoViewSet
 from comentario.api.viewsets import ComentarioViewSet
+from avaliacao.api.viewsets import AvaliacaoViewSet
 
 routers = routers.DefaultRouter()
 routers.register(r'pontosturisticos', PontoTuristicoViewSet)
 routers.register(r'atracao', AtracaoViewSet)
 routers.register(r'localizacoes', LocalizacaoViewSet)
-routers.register(r'comentario', ComentarioViewSet)
+routers.register(r'comentarios', ComentarioViewSet)
+routers.register(r'avaliacoes', AvaliacaoViewSet)
 
 urlpatterns = [
     path('', include(routers.urls)),
