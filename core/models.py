@@ -12,7 +12,7 @@ class PontoTuristico(models.Model):
     atracoes = models.ManyToManyField(Atracao)
     comentarios = models.ManyToManyField(Comentarios)
     avaliacoes = models.ManyToManyField(Avaliacoes)
-    endereco = models.ForeignKey(Localizacao, on_delete=models.CASCADE)
+    endereco = models.ForeignKey(Localizacao, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.nome
